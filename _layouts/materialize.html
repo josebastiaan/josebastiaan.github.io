@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: " en" }}">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,16 +11,70 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <title>{{site.title}}</title>
+    <title>2nd website of the course</title>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.modal');
+            var instances = M.Modal.init(elems, options);
+        });
+    </script>
+    
     <style>
         .responsive-img {
-            margin-bottom: 5px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 
 <body>
-    {{ content }}
+    <h1>Second day of making a website</h1>
+    <p>Some pictures in a grid. On the first row three different pictures. On te second the same pictures repeated</p>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6 l4">
+                <!--settings for small and larger, medium and larger, large and larger;)-->
+                <img src="https://placeimg.com/640/480/any/1" class="responsive-img" />
+            </div>
+            <div class="col s12 m6 l4">
+                <img src="https://placeimg.com/640/480/any/2" class="responsive-img" />
+            </div>
+            <div class="col s12 m6 l4">
+                <img src="https://placeimg.com/640/480/any/3" class="responsive-img" />
+            </div>
+            <div class="col s12 m6 l4">
+                <img src="https://placeimg.com/640/480/any/1" class="responsive-img" />
+            </div>
+            <div class="col s12 m6 l4">
+                <img src="https://placeimg.com/640/480/any/2" class="responsive-img" />
+            </div>
+            <div class="col s12 m6 l4">
+                <img src="https://placeimg.com/640/480/any/3" class="responsive-img" />
+            </div>
+        </div>
+    </div>
+
+    <h2>Background</h2>
+    <p>This website is based on the repository from the lecturer,
+        giving us a jumpstart into the creation of a website using a template from (in this case) mater ialize</p>
+
+    <h2>Some functionalities</h2>
+
+
+
+    <!-- Modal Trigger -->
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div>
 </body>
 
 </html>
